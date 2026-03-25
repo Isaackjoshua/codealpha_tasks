@@ -1,0 +1,39 @@
+{
+  "dataset": "/home/izy/Documents/Project/CodeAlpa_Tasks/CodeAlpha_Creditscore/data/credit_data.csv",
+  "target": "creditworthy",
+  "seed": 42,
+  "test_size": 0.15,
+  "val_size": 0.15,
+  "selection_metric": "roc_auc (cross-validation)",
+  "ranking": [
+    {
+      "model": "logistic_regression",
+      "best_params": {
+        "model__C": 1.0,
+        "model__penalty": "l2"
+      },
+      "cv_best_roc_auc": 0.7994572492383487,
+      "val_roc_auc": 0.8229229323308271
+    },
+    {
+      "model": "random_forest",
+      "best_params": {
+        "model__max_depth": 6,
+        "model__max_features": "sqrt",
+        "model__min_samples_leaf": 5
+      },
+      "cv_best_roc_auc": 0.7893592683527864,
+      "val_roc_auc": 0.8138157894736842
+    },
+    {
+      "model": "decision_tree",
+      "best_params": {
+        "model__max_depth": 5,
+        "model__min_samples_leaf": 10
+      },
+      "cv_best_roc_auc": 0.7292408666880504,
+      "val_roc_auc": 0.737232142857143
+    }
+  ],
+  "best_model": "logistic_regression"
+}
